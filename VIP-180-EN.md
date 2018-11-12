@@ -6,7 +6,7 @@
 
 # Overview
 
-The VIP-180 Standard is a superset of the [ERC20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md). It outlines a set of common APIs that all tokens can follow on the Vethor network to transfer tokens, as well as allow tokens to be approved so they can be spent by another on-chain thrid party saftly.
+The VIP-180 Standard is a superset of the [ERC20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md). It outlines a set of common APIs that all tokens can follow on the VeChainThor Network to transfer tokens, as well as allow tokens to be approved so they can be spent by another on-chain thrid party safely.
 
 # Specification
 
