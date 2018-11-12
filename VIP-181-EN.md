@@ -6,7 +6,7 @@
 
 # Overview
 
-The VIP-181 Standard outlines a set of common methods that all NFT tokens can follow on the Vethor network to transfer tokens, as well as allow tokens to be approved so they can be spent by another on-chain thrid party saftly.
+The VIP-181 Standard outlines a set of common methods that all NFT tokens can follow on the VeChainThor Network to transfer tokens, as well as allow tokens to be approved so they can be spent by another on-chain thrid party safely.
 
 
 # Specification
