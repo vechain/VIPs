@@ -1,6 +1,8 @@
 > VIP: 181
-> Title: VIP-181 Non-fungible Token Standard   
-> Category: Standard   
+> Title: VIP-181 Non-fungible Token Standard
+> Category: Application
+> Author: VeChain Foundation
+> Status: Final
 > CreatedAt: 2018-09-01
 --------------------- 
 
