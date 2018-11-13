@@ -1,6 +1,8 @@
-> VIP: 180  
-> Title: VIP-180 Fungible Token Standard   
-> Category: Standard   
+> VIP: 180
+> Title: VIP-180 Fungible Token Standard
+> Category: Application
+> Author: VeChain Foundation
+> Status: Final
 > CreatedAt: 2018-09-01
 --------------------- 
 
