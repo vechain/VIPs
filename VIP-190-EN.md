@@ -1,5 +1,5 @@
 ---
-VIP: 3
+VIP: 190
 Title: Personal Sign Standard
 Category: Interface
 Author: Kevin Britz <kevin@totientlabs.com>
@@ -9,7 +9,7 @@ CreatedAt: 2019-02-05
 
 # Overview
 
-The below VIP-3 standard outlines an interface for personal sign when using `web3` to sign messages for VeChainThor dApps. This standard is based on Ethereum's [eth_sign](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign) RPC call, and modified to fit Vechain's signature standards.
+The below VIP-190 standard outlines an interface for personal sign when using `web3` to sign messages for VeChainThor dApps. This standard is based on Ethereum's [eth_sign](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign) RPC call, and modified to fit Vechain's signature standards.
 
 # Motivation
 

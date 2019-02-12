@@ -10,9 +10,9 @@ The VIP author is responsible for building consensus within the community and do
 
 | No  | Title                       | Owner   | Category    | Status |
 | --- | --------------------------- | ------- | ----------- | ------ |
-| 3   | Personal Sign Standard      | Totient Labs | Interface | Draft  |
 | 180 | Fungible Token Standard     | VeChain | Application | Final  |
 | 181 | Non-Fungible Token Standard | VeChain | Application | Final  |
+| 190 | Personal Sign Standard      | Totient Labs | Interface | Draft  |
 
 
 ## Contributing
