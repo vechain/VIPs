@@ -1,0 +1,34 @@
+---
+VIP: 190
+Title: Personal Sign Standard
+Category: Interface
+Author: Kevin Britz <kevin@totientlabs.com>
+Status: Draft
+CreatedAt: 2019-02-05
+---
+
+# Overview
+
+The below VIP-190 standard outlines an interface for personal sign when using `web3` to sign messages for VeChainThor dApps. This standard is based on Ethereum's [eth_sign](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign) RPC call, and modified to fit Vechain's signature standards.
+
+# Motivation
+
+This standard is already in use in the Ledger Hardware Wallet application and Comet's implementation of `web3` personal sign. Standardization will ensure that dApps may support multiple clients with a single signature implementation.
+
+# Specification
+
+A prefix is necessary to ensure that a malicious dApp cannot sign or recover arbitrary messages. 
+
+```
+prefix = "\x19VeChain Signed Message:\n" + len(message)
+```
+
+To obtain the final payload for signature, we append the message to the prefix and hash with `blake2b256`
+
+```
+signature = sign(blake2b256(prefix + message))
+```
+
+# Implementation
+
+- https://github.com/LedgerHQ/ledger-app-vet
