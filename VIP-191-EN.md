@@ -64,34 +64,40 @@ This method will require more significant updates to the node codebase as we wil
 As discussed later, since `origin` is not part of the transaction, we get the benefit of more censor-resistant transactions.
 
 # Expected Usage
-With VIP-191 we expect at least two types of Gas Relayers to emerge: `Generic Relayers` and `Application-Specific Relayers`. Both types of relayers will consist of a centralized service that takes in unsign transactions via an API and returns `gasPayer`-signed transactions per its internal instruction set.
+With VIP-191 we expect at least two types of Gas Relayers to emerge: `Generic Relayers` and `Application-Specific Relayers`. Both types of relayers will consist of a centralized service that takes in unsign transactions via an API and returns `gasPayer`-signed transactions per their internal instruction sets.
 
 ### Generic Relayer
-We expect a generic relayer to accept any transaction, while adding an additional clause to charge the user in VET or a VIP180 token to cover the cost of gas (as well as a fee for the service).
+A `Generic Relayer` is a Gas Relayer that accepts all transactions for delegation and in exchange attaches an additional transfer clause to the transaction which charges a fee in whichever token the end user prefers. This allows an end user to still pay for their transaction fee, but to pay in another currency such as `VET` or a stablecoin. 
 
-In this case wallets may plug in to a pool of gas relayers to provide lowest-cost service to their users such that users can send transactions without necessarily holding VTHO.
-
-We expect a fee market to develop ensuring that the users recieve at-market price for fee delegation.
+In this case wallets may plug in to a pool of Generic Relayers (ideally with a standardized API) to provide lowest-cost service to their users such that users may send transactions using whichever currency they may hold. Following this we expect a fee market to develop ensuring that the users receive at-market price for fee delegation.
 
 #### Experience
-- User constructs unsigned transaction
-- User sends unsigned tx to one or many Gas Relayers
-- Gas Relayer optionally attaches a fee via an additional transfer clause
-- If acceptable, Gas Relayer signs the unsigned transaction (sans `gasPayerSignature` field) to create the `gasPayerSignature`
-- Gas Relayer returns the `gasPayerSignature` and optional fee transfer clause to the end user
-- User verifies the the added fee is acceptable, or chooses the lowest fee from multiple relayers
-- User constructs final transaction including `gasPayerSignature`, signs, and then transmits to the node
+- Wallet receives unsigned transaction for signature from dApp
+- Wallet checks its VTHO balance (or MPP credit), sees it doesn't not have enough VTHO but does have enough of X token
+- Wallet sends unsigned transaction to one or many Generic Relayers
+- Each Generic Relayer attaches what it deems a reasonable fee in X token via an additional transfer clause and signs
+- Relayer returns the `gasPayer`-signed transaction to the Wallet
+- Wallet selects the `gasPayer`-signed transaction that is both correct and has the lowest fee
+- Wallet signs and broadcasts selected transaction
 
-**Note:** This process would be handled automatically by the wallet, dApp, or Connex/web3 provider.
+**Note:** In this process the Wallet (such as Sync or Comet) will handle this process for each transaction as a generic feature
 
 ### Application Specific Relayer
-In addition to generic relayers this also gives dApps more flexibility in paying for their own transactions.
+In addition to Generic Relayers we also forsee a case where dApps themselves would like to operate a Gas Relayer. This would grant the ability for dApps to pay fees on behalf of their users for specific transactions (similar but more extensible than MPP).
 
 Consider the case where Wrapped VET must be used within a dApp's flow. The dApp does not own the contracts for Wrapped VET, however would like to pay for the wrapping and approving process in relation to usage with its platform. This cannot be done with pure MPP, however with this proposal the dApp would be able to create a relayer that covers the transaction fees in specifically those scenarios for free.
 
+#### Experience
+- dApp frontend messages dApp-backend to say that it would like to send a specified transaction that is `gasPayer`-signed by the dApp
+- dApp-backend authenticates request and applies any other risk checks before `gasPayer`-signing the transaction (without adding a fee) and returning to the dApp-frontend
+- dApp-frontend sends the `gasPayer`-signed transaction to the Wallet
+- Wallet sees that the transaction is already `gasPayer`-signed and skips all internal gas checks (balance, MPP, or Generic Relayer)
+- Wallet signs and broadcasts transaction
 
-#### Consorship
-The main issue with gas relayers is censorship: relayers may choose not to relay your transaction. By flipping this model we are able to collect quotes from many relayers, and only then choose to transmit the transaction ourselves. With this, censorship is only possible if none of the relayers sign the transaction, which with a sufficiently large and decentralized pool is increasingly unlikely. Further since the transactions are still unsigned, there is no way to deduce the sender, further obfuscating potential information that could be used to censor.
+**Note:** In this process the dApp (such as CometVerse) will handle this process for each `gasPayer`-signed transaction, only needing the wallet to handle recognizing the present signature for proper UX.
+
+### Consorship
+The main issue with gas relayers is censorship: relayers may choose not to relay your transaction. By flipping this model we are able to collect quotes from many relayers, and only then choose to transmit the transaction ourselves. With this, censorship is only possible if none of the relayers sign the transaction, which with a sufficiently large and decentralized pool is increasingly unlikely. Further, (only if we select Option 2 for Replay Protection) since the transactions are still unsigned, there is no way to deduce the sender, further obfuscating potential information that could be used to censor.
 
 # Implementation
 
