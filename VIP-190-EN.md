@@ -3,7 +3,7 @@ VIP: 190
 Title: Personal Sign Standard
 Category: Interface
 Author: Kevin Britz <kevin@totientlabs.com>
-Status: Draft
+Status: Final
 CreatedAt: 2019-02-05
 ---
 
@@ -32,3 +32,5 @@ signature = sign(blake2b256(prefix + message))
 # Implementation
 
 - https://github.com/LedgerHQ/ledger-app-vet
+
+- https://github.com/vechain/thorify/blob/master/src/extend/accounts.ts#L125
