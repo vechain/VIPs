@@ -20,12 +20,11 @@ MPP covers a large subset of fee delegation use cases, however there exists some
 
 We would like we propose a complimentary protocol to generically allow a **Gas Relayer** to pay transaction fees for specific transactions.
 
-
 # Specification
 
-We will accomplish this by optionally expanding the `signature` field to contain an additional `gasPayerSignature` concatenated with the original signature, and by including the `origin` in an index of `reserved` for replay protection.
+We will accomplish this by optionally expanding the `signature` field to contain an additional `gasPayerSignature` concatenated with the original signature, and by including either `isDelegated` in an index of `reserved` for replay protection.
 
-To construct a valid VIP-191 transaction, the sender must include `origin` and `gasPayerSignature`, however they are both otherwise optional to preserve backwards compatibility.
+To construct a valid VIP-191 transaction, the sender must include `isDelegated` and `gasPayerSignature`, however they are both otherwise optional to preserve backwards compatibility. If only `isDelegated` or `gasPayerSignature` is included, the transaction should be reverted as it contains redundant data.
 
 #### `signature` field update
 | Bytes | Attribute | Type | Optional
@@ -35,13 +34,55 @@ To construct a valid VIP-191 transaction, the sender must include `origin` and `
 
 The `gasPayer` can then be recovered from this additional `signature` data, similarly to the originator signature.
 
+## Recommended: `isDelegated`
+
+#### `reserved` field update
+| Index | Attribute | Type | Optional |
+| --- | --- | --- | --- |
+| 0 | `isDelegated` |  boolean | yes |
+
+#### `gasPayerSignature` Specification
+```
+payload = blake2b256(blake2b256(encodedUnsignedTx), origin)  // Same as txId computation
+gasPayerSignature = sign(payload, gasPayer)
+```
+Adding `isDelegated` as a `reserved` field allows us to signal to the VM that this is transaction should be paid for by an external `gasPayer`. Because `origin` is part of the payload that the `gasPayer` signs, the `gasPayer` may verify that it is not being tricked into signing a transaction from itself. This method also allows either the `gasPayer` or the sender to sign the transaction first as the `gasPayer` only needs to know `origin` and not the full sender signature to sign.
+
+Because the sender may sign first or last, both delegator and relayer patterns are possible depending on the developer's use case.
+
+## Alternative Discussed: `origin`
+
 #### `reserved` field update
 | Index | Attribute | Type | Optional |
 | --- | --- | --- | --- |
 | 0 | `origin` |  address | yes |
 
-Adding `origin` as a `reserved` field allows us to verify that the `gasPayer` is aware of the sender at time of signature, and that only a single sender may send the eventual transaction. It also allows the `gasPayer` to verify that an attacker has not tricked it into signing a transaction from itself. In order for the VIP-191 transaction to be valid, the `origin` must be present and match the originator signature. This replay attack is discussed further in [#Replay Protection Discussion](#Replay-Protection-Discussion).
+Adding `origin` as a `reserved` field allows us to verify that the `gasPayer` is aware of the sender at time of signature, and that only a single sender may send the eventual transaction. It also allows the `gasPayer` to verify that an attacker has not tricked it into signing a transaction from itself. In order for the VIP-191 transaction to be valid, the `origin` must be present and match the originator signature. This replay attack is discussed further in [Replay Protection Discussion](#Replay-Protection-Discussion).
 
+Though this solves the same problems, it requires 20 bytes of extra data instead of 1. All else the same, it is a less efficient use of transaction space.
+
+## Delegation vs Relaying Discussion
+Both delegation and relaying accomplish some of the goals outlined, but do so in very different ways with significant tradeoffs. Generally speaking the difference is that with relaying a 3rd party has the final say on whether a transaction will be submitted, while delegation allows the sender to remain in control of the final signoff on transactions. From an ideological point of view delegation is preferred, but there are also many technical tradeoffs to weigh in the decision.
+
+### Delegation
+With delegation we have all the data available for the end user at time of signing. Is the transaction MPP'd? Is it `gasPayer`-signed? Has there been a generalized fee attached? The wallet is able to display exactly what will happen with the transaction during the signature presentation screen. After signing, the transaction is immediately broadcast to the blockchain and does not rely on extra steps beyond user signature.
+
+#### General Case
+![image](https://user-images.githubusercontent.com/747165/54079713-b3c3ec00-4296-11e9-9ade-a893432b66fe.png)
+#### Application Case
+![image](https://user-images.githubusercontent.com/747165/54079714-bb839080-4296-11e9-8112-613508130679.png)
+
+### Relaying
+Relaying accomplishes similar goals, but relies on 3rd parties to send the resulting transaction rather than the sender. Because the relayer must sign after the sender, there is no guarantee that once the sender has signed, the transaction will be promptly (or ever) broadcast to the network. Several edge cases could arise where a relayer may refuse to sign or fail to relay a transaction after the user has signed. Further a relayer could "hoard" valid transactions to send to the network well after they were intended, opening up significant attack vectors (this could be mitigated by carefully setting transaction expiration).
+
+Further this case requires somewhat significant changes to web3/Connex. Connex does not allow transactions to be signed without being broadcast, which would be required for this flow. web3 does support this, but Comet does not currently due to the adverse hoarding cases that have been outlined above.
+#### General Case
+![image](https://user-images.githubusercontent.com/747165/54079707-7eb79980-4296-11e9-8db1-a8034d7cb698.png)
+#### Application Case
+![image](https://user-images.githubusercontent.com/747165/54079712-a575d000-4296-11e9-9d6c-d978da2b54c1.png)
+
+
+## Further specifications
 #### Transaction hash
 The transaction hash calculation may be unchanged since only the `tx.Signer()` is incorporated rather than the full signature.
 
@@ -81,7 +122,7 @@ This method will require more significant updates to the node codebase as we wil
 
 Since `origin` is not part of the transaction, we get the benefit of more censor-resistant transactions.
 
-# Expected Usage
+# Example Usage
 With VIP-191 we expect at least two types of Gas Relayers to emerge: `Generic Relayers` and `Application-Specific Relayers`. Both types of relayers will consist of a centralized service that takes in unsign transactions via an API and returns `gasPayer`-signed transactions per their internal instruction sets.
 
 ### Generic Relayer
@@ -115,7 +156,7 @@ Consider the case where Wrapped VET must be used within a dApp's flow. The dApp 
 **Note:** In this process the dApp (such as CometVerse) will handle this process for each `gasPayer`-signed transaction, only needing the wallet to handle recognizing the present signature for proper UX.
 
 ### Consorship
-The main issue with gas relayers is censorship: relayers may choose not to relay your transaction. By flipping this model we are able to collect quotes from many relayers, and only then choose to transmit the transaction ourselves. With this, censorship is only possible if none of the relayers sign the transaction, which with a sufficiently large and decentralized pool is increasingly unlikely.
+The main issue with gas relayers is censorship: relayers may choose not to relay a transaction. By flipping this model we are able to collect quotes from many relayers, and only then choose to transmit the transaction ourselves. With this, censorship is only possible if none of the relayers sign the transaction, which with a sufficiently large and decentralized pool is increasingly unlikely.
 
 # Implementation
 
@@ -123,10 +164,13 @@ The main issue with gas relayers is censorship: relayers may choose not to relay
 ```
 gasPayer = user
 
-if tx.hasGasPayerSignature():
-    if tx.Signer() != tx.Origin():
-        revert
-    gasPayer = recover(tx, tx.gasPayerSignature())
+if tx.reserved[0]:
+    if !tx.hasGasPayerSignature():
+        revert()
+    else:
+        gasPayer = recover(tx.id(), tx.gasPayerSignature())
+        if gasPayer == tx.Signer():
+            revert()
 
 if isMPPed(tx):
     gasPayer = tx.Sponsor()
