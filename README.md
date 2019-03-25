@@ -13,6 +13,7 @@ The VIP author is responsible for building consensus within the community and do
 | 180 | Fungible Token Standard     | VeChain | Application | Final  |
 | 181 | Non-Fungible Token Standard | VeChain | Application | Final  |
 | 190 | Personal Sign Standard      | Totient Labs | Interface | Final  |
+| 191 | Designated Gas Payer        | Totient Labs | Core | Draft  |
 
 
 ## Contributing
