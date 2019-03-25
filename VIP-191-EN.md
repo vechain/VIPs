@@ -3,7 +3,7 @@ VIP: 191
 Title: Designated Gas Payer
 Category: Core
 Author: Kevin Britz <kevin@totientlabs.com>, Arjun Rao <arjun@totientlabs.com>
-Status: Final
+Status: Draft
 CreatedAt: 2019-02-16
 ---
 
