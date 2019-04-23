@@ -41,16 +41,16 @@ CreatedAt: 2019-03-12
 
 1. JSON 对象的 key 按照字母表顺序升序排列；
 2. 编码结果必须是紧凑的，即：无缩进、无换行；
-3. 涉及字符编码，均使用utf-8；
+3. 涉及字符编码，均使用 `utf-8`；
 4. *signer* 和 *signature* 字段编码为16进制，0x开头的小写形式。
 
 ## Hashing
 
-默认哈希算法采用 VeChain 广泛使用的 blake2b 256-bit 哈希算法。
+默认哈希算法采用 VeChain 广泛使用的 `blake2b 256-bit` 哈希算法。
 
 ## Signing
 
-默认签名算法使用secp256k1。待签名消息定义为：包含除 *signature* 以外的所有字段，经过上述编码方式编码后的输出。
+默认签名算法使用 `secp256k1`。待签名消息定义为：包含除 *signature* 以外的所有字段，经过上述编码方式编码后的输出。
 
 ## Verification
 
