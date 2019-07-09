@@ -13,7 +13,7 @@ The VIP author is responsible for building consensus within the community and do
 | [180](./vips/VIP-180.md) | Fungible Token Standard        | VeChain | Application | Final  |
 | [181](./vips/VIP-181.md) | Non-Fungible Token Standard    | VeChain | Application | Accepted  |
 | [190](./vips/VIP-190.md) | Personal Sign Standard         | Totient Labs | Interface | Final  |
-| [191](./vips/VIP-191.md) | Designated Gas Payer           | Totient Labs | Core | Draft  |
+| [191](./vips/VIP-191.md) | Designated Gas Payer           | Totient Labs | Core | Final  |
 | [192](./vips/VIP-192.md) | Simple Self-signed Certificate | Qian Bin | Interface | Draft |
 
 
