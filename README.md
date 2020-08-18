@@ -16,7 +16,7 @@ The VIP author is responsible for building consensus within the community and do
 | [191](./vips/VIP-191.md) | Designated Gas Payer           | Totient Labs | Core | Draft  |
 | [192](./vips/VIP-192.md) | Simple Self-signed Certificate | Qian Bin | Interface | Draft |
 | [193](./vips/VIP-193.md) | Committee-Based POA | Ziheng Zhou (peter.zhou@vechain.com) and Zhijie Ren (zhijie.ren@vechain.com) | Core | Draft |
-
+| [200](./vips/VIP-200.md) | Implementation of SURFACE BFT Protocol | Ziheng Zhou (peter.zhou@vechain.com) and Zhijie Ren (zhijie.ren@vechain.com) | Core | Draft |
 
 ## Contributing
 
