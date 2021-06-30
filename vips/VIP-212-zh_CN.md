@@ -2,7 +2,7 @@
 VIP: 212
 Title: Direct State Access
 Category: Core
-Author: Qian Bin <bin.qian@vechain.com>
+Author: Qian Bin <cola.tin.com@gmail.com>
 Status: Draft
 CreatedAt: 2021-06-28
 ---
