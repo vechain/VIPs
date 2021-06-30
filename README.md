@@ -18,7 +18,7 @@ The VIP author is responsible for building consensus within the community and do
 | [193](./vips/VIP-193.md) | Committee-Based POA | Ziheng Zhou (peter.zhou@vechain.com) and Zhijie Ren (zhijie.ren@vechain.com) | Core | Draft |
 | [200](./vips/VIP-200.md) | Implementation of SURFACE BFT Protocol | Ziheng Zhou (peter.zhou@vechain.com) and Zhijie Ren (zhijie.ren@vechain.com) | Core | Draft |
 | [201](./vips/VIP-201.md) | Simple Gas Payer Standard | Xiqing Chu <xiqing.chu@vechain.com> & Mog Lu <mog.lu@vechain.com> | Information | Draft |
-
+| [212](./vips/VIP-212-zh_CN.md) | Direct State Access | Qian Bin (<cola.tin.com@gmail.com>) | Core | Draft |
 
 ## Contributing
 
