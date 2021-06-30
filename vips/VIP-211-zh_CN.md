@@ -9,7 +9,7 @@ CreatedAt: 2021-06-18
 
 # 概述
 
-本提案在保持兼容的前提下，赋予默克尔·帕特里夏树（Merkle Patricia Trie，简称MPT）“提交编号”（Commit Number）的特性。
+本提案在保持兼容的前提下，赋予默克尔·帕特里夏树（Merkle Patricia Trie，简称MPT）**提交编号**（Commit Number）的特性。
 
 # 详情
 
@@ -24,7 +24,7 @@ CreatedAt: 2021-06-18
 
 ## 构造函数
 
-标定一棵状态树，原先只需要根节点哈希，现在还需要提交编号`commitNum`。
+标定一棵状态树，原先只需要根节点哈希，现在还需要提交编号 `commitNum`。
 
 ```diff
 -// 旧的定义
@@ -35,12 +35,11 @@ CreatedAt: 2021-06-18
 
 ## Commit方法
 
-和构造函数类似，`Commit`方法也要加上`commitNum`参数。
+和构造函数类似，`Commit` 方法也要加上 `commitNum` 参数。
 
 ```diff
 -// 旧的定义
 -func (t *Trie) Commit() (thor.Bytes32, error)
-
 +// 新的定义
 +func (t *Trie) Commit(commitNum uint32) (thor.Bytes32, error)
 ```    
@@ -53,19 +52,19 @@ CreatedAt: 2021-06-18
 hash(RLP(node)) => RLP(node)
 ```
 
-即：通过RLP编码将节点转换成blob，求blob的hash，然后把hash和blob作为键值对直接存储到数据库中。
+即：通过RLP编码将节点转换成 *blob*，求 *blob* 的hash，然后把hash和 *blob* 作为键值对直接存储到数据库中。
 
-有了“提交编号”之后，我们把原先的hash和blob键值对扩展为：
+有了**提交编号**之后，我们把原先的hash和 *blob* 键值对扩展为：
 
 ```
 prefix || hash(RLP(node)) => RLP(node) || trailing
 ```
-其中`prefix`长度为4个字节，由`commitNum`经big-endian编码得到。`trailing`包含当前节点的子节点的提交编号，为了紧凑，使用RLP编码。节点有两种类型：`shortNode`和`fullNode`。`shortNode`只有一个子节点，因此把其唯一子节点的提交编号（uint32）RLP编码就成为它的`trailing`。`fullNode`有16个子节点，可以简单的将子节点的提交编号数组（[16]uint32）RLP编码作为`trailing`。
+其中 *prefix* 长度为4个字节，由 *commitNum* 经big-endian编码得到。*trailing* 包含当前节点的子节点的提交编号，为了紧凑，使用RLP编码。节点有两种类型：*shortNode* 和 *fullNode*。*shortNode* 只有一个子节点，因此把其唯一子节点的提交编号（`uint32`）RLP编码就成为它的 *trailing*。*fullNode* 有16个子节点，可以简单的将子节点的提交编号数组（`[16]uint32`）RLP编码作为 *trailing*。
 
 
 ## 实现提示
 
-通过扩展`hashNode`类型可以简化实现。
+通过扩展 `hashNode` 类型可以简化实现。
 
 ```diff
 -// 旧的定义
