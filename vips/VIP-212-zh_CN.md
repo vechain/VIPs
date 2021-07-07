@@ -49,13 +49,13 @@ MPT管理的状态包含多个历史版本，呈树状结构。遍历MPT某个�
 
 ## 直接状态访问
 
-要访问区块 *M* 中的某个状态 *K*，需要依次查询 *node<sub>0</sub>, node<sub>1</sub> ... node<sub>i</sub>* 共 *i+1* 个节点，其中 *node<sub>0</sub>* 是根节点，*node<sub>i</sub>* 是包含了状态 *K* 的叶子节点。在应用了[VIP-211](./VIP-211-zh_CN.md)之后，节点具有了提交编号，分别为 *C<sub>0</sub>, C<sub>1</sub> ... C<sub>i</sub>*，其中 *C<sub>0</sub> = M*。令 *M ≥ N*, 并且区块 *M* 和 *N* 同属一条链。
+要访问区块 *M* 中的某个状态 *K*，需要依次查询 *node<sub>0</sub>, node<sub>1</sub> ... node<sub>i</sub>* 共 *i+1* 个节点，其中 *node<sub>0</sub>* 是根节点，*node<sub>i</sub>* 是包含了状态 *K* 的叶子节点。在应用了[VIP-211](./VIP-211-zh_CN.md)之后，节点具有了提交编号，分别为 *C<sub>0</sub>，C<sub>1</sub> ... C<sub>i</sub>*，其中 *C<sub>0</sub> = M*。令 *M ≥ N*, 并且区块 *M* 和 *N* 同属一条链。
 
 根据[VIP-211](./VIP-211-zh_CN.md)的性质2：
 
 > **父节点的提交编号总是大于等于子节点的提交编号**
 
-得到 *C<sub>0</sub> ≥ C<sub>1</sub> ... ≥ C<sub>i</sub>*。在依次查询节点的过程中，加入判断 *C<sub>j</sub> ≤ N*。不难看出，当 *C<sub>j</sub> ≤ N* 成立时，*C<sub>i</sub> ≤ N* 必定成立，这意味着，叶子节点 *node<sub>i</sub>* 以及它包含的状态 *K* 从区块 *N* 直到 *M* 都没有被更新过，因此可以跳过子节点查询，直接从 *S<sub>N</sub>* 中获取状态 *K*。
+得到 *C<sub>0</sub> ≥ C<sub>1</sub> ... ≥ C<sub>i</sub>*。在依次查询节点的过程中，加入判断 *C<sub>j</sub> ≤ N*, 其中 *0 ≤ j ≤ i*。不难看出，当 *C<sub>j</sub> ≤ N* 成立时，*C<sub>i</sub> ≤ N* 必定成立，这意味着，叶子节点 *node<sub>i</sub>* 以及它包含的状态 *K* 从区块 *N* 直到 *M* 都没有被更新过，因此可以跳过子节点查询，直接从 *S<sub>N</sub>* 中获取状态 *K*。
 
 # 结论
 
