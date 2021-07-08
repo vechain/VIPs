@@ -49,7 +49,7 @@ T<sub>N<sup>'</sup></sub>
 
 为了便于实现，以及对性能的考量，需要在[VIP-211](./VIP-211-zh_CN.md)的基础上再次扩展节点的存储格式：
 
-    pack(path) || commitNum || hash(RLP(node)) => ...
+    pack(path) || commitNum || hash(node) => ...
 
 即：在节点存储键之前加上节点的路径信息。
 
