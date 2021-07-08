@@ -9,23 +9,44 @@ CreatedAt: 2021-06-18
 
 # 概述
 
-本提案在保持兼容的前提下，赋予默克尔·帕特里夏树（Merkle Patricia Trie，简称MPT）**提交编号**（Commit Number）的特性。
+本提案通过扩展默克尔·帕特里夏树（Merkle Patricia Trie，简称MPT）的存储格式，赋予节点**提交编号**的属性。
 
 # 详情
 
-唯链的每个区块对应一次MPT状态树提交，每个提交产生一批新的节点，包括一个根节点，其哈希值被区块索引，节点不包含任何关于区块的信息。现在把区块编号作为提交操作的编号，附加到新节点之上，使节点包含了额外的信息，即：这个节点是由哪个区块产生的，从而为后续的优化提供有力的支持。新的MPT具备的重要性质总结如下：
+唯链的每个区块包含一次MPT状态树提交，在执行提交时，将当前区块编号作为**提交编号**，包含到提交产生的新节点之中。为此，需要扩展节点的存储格式。
 
-1. **新节点的的提交编号总是大于老节点的提交编号**
+原先存储节点时，以节点的哈希作为键，节点本身作为值：
 
-1. **父节点的提交编号总是大于等于子节点的提交编号**
+```
+hash(node) => node
+```
 
-为了实现此提案，需要对MPT接口进行以下修改：
+扩展为：
 
+```
+prefix || hash(node) => node || trailing
+```
 
-## 构造函数
+其中 *prefix* 长度为4个字节，由 *commitNum* 经big-endian编码得到。*trailing* 包含子节点的提交编号，为了紧凑，使用RLP编码。节点有两种类型：*shortNode* 和 *fullNode*。*shortNode* 只有一个子节点，因此把其唯一子节点的提交编号（`uint32`）RLP编码就成为它的 *trailing*。*fullNode* 有16个子节点，可以简单的将子节点的提交编号数组（`[16]uint32`）RLP编码作为 *trailing*。
 
-标定一棵状态树，原先只需要根节点哈希，现在还需要提交编号 `commitNum`。
+相应的，哈希指针需要被扩展。在代码中，哈希指针用`hashNode`描述：
 
+```go
+type hashNode []byte
+```
+
+扩展为：
+
+```go
+type hashNode struct {
+    hash      []byte
+    commitNum uint32
+}
+```
+
+此外，接口也需要有所改动：
+
+构造函数
 ```diff
 -// 旧的定义
 -func New(root thor.Bytes32, db Database) (*Trie, error)
@@ -33,45 +54,18 @@ CreatedAt: 2021-06-18
 +func New(root thor.Bytes32, commitNum uint32, db Database) (*Trie, error)
 ```
 
-## Commit方法
-
-和构造函数类似，`Commit` 方法也要加上 `commitNum` 参数。
-
+提交方法
 ```diff
 -// 旧的定义
 -func (t *Trie) Commit() (thor.Bytes32, error)
 +// 新的定义
 +func (t *Trie) Commit(commitNum uint32) (thor.Bytes32, error)
-```    
-
-## 存储逻辑
-
-节点原先的存储方式：
-
-```
-hash(RLP(node)) => RLP(node)
 ```
 
-即：通过RLP编码将节点转换成 *blob*，求 *blob* 的hash，然后把hash和 *blob* 作为键值对直接存储到数据库中。
+# 结论
 
-有了**提交编号**之后，我们把原先的hash和 *blob* 键值对扩展为：
+新的MPT具有如下重要性质：
 
-```
-prefix || hash(RLP(node)) => RLP(node) || trailing
-```
-其中 *prefix* 长度为4个字节，由 *commitNum* 经big-endian编码得到。*trailing* 包含当前节点的子节点的提交编号，为了紧凑，使用RLP编码。节点有两种类型：*shortNode* 和 *fullNode*。*shortNode* 只有一个子节点，因此把其唯一子节点的提交编号（`uint32`）RLP编码就成为它的 *trailing*。*fullNode* 有16个子节点，可以简单的将子节点的提交编号数组（`[16]uint32`）RLP编码作为 *trailing*。
+1. **新节点的的提交编号总是大于老节点的提交编号**
 
-
-## 实现提示
-
-通过扩展 `hashNode` 类型可以简化实现。
-
-```diff
--// 旧的定义
--type hashNode []byte
-+// 新的定义
-+hashNode struct {
-+    hash      []byte
-+    commitNum uint32
-+}
-```
+1. **父节点的提交编号总是大于等于子节点的提交编号**
