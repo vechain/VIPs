@@ -1,0 +1,18 @@
+---
+VIP: 214
+Title: Per Epoch VRF-based Random Beacon Generation
+Author: Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com)
+Category: Core
+Status: Draft
+CreatedAt: 2021-10-20
+---
+
+# Overview
+The Proof-of-Authority consensus algorithm [1], or POA in short, has a non-quantifiable unpredictability, which makes it vulnerable to adaptive corruption attack. Here, we propose a per epoch VRF-based random beacon generation mechanism. This mechanism will guarantee that the leader of epoch e is unpredictable before epoch e-2 and the adversaries cannot manipulate the beacon to gain significant advantage to be selected by the leader.
+
+# Specifications
+
+[Read more](../assets/vip214.pdf)
+
+# References
+[1] [Vechain development plan and whitepaper](https://cdn.vechain.com/vechainthor_development_plan_and_whitepaper_en_v1.0.pdf), 2018.
