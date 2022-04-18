@@ -1,71 +1,42 @@
 ---
 VIP: 211
-Title: Numbering Commits for State Trie
+Title: Advanced MPT Storage Scheme
 Category: Core
 Author: Qian Bin <cola.tin.com@gmail.com>
 Status: Draft
 CreatedAt: 2021-06-18
 ---
 
-# 概述
 
-本提案通过扩展默克尔·帕特里夏树（Merkle Patricia Trie，简称MPT）的存储格式，赋予节点**提交编号**的属性。
+# 背景
 
-# 详情
+日交易量增长迅速，存量交易水涨船高，状态数据呈爆炸式增长。如何更有效的存储这些数据--尤其是状态数据，变得越来越迫切。区块链通常选择支持高写入速度的K-V数据库作为存储后端，例如leveldb，唯链也不例外。对leveldb来说，有序的数据能减少数据归并，从而降低写放大、提高写入吞吐量、减小磁盘磨损；还能减少每次查询所需的IO操作，从而降低查询时延。
 
-唯链的每个区块包含一次MPT状态树提交，在执行提交时，将当前区块编号作为**提交编号**，包含到提交产生的新节点之中。为此，需要扩展节点的存储格式。
+# 详述
 
-原先存储节点时，以节点的哈希作为键，节点本身作为值：
+状态数据依托MPT(Merkle Patricia Trie)存在，MPT的节点是基本的存储单位，节点拥有哈希和路径两个基本属性。以以太坊为代表的基于MPT的区块链，普遍以哈希来索引节点，哈希的分布具有随机性，这对数据库来说是不友好的。路径相对哈希来说稍好一些，不过测试表明通过连接路径和哈希来索引节点并不能带来足够的提升。区块链本质上是账本状态随时间变化的序列，状态的变化包含在MPT提交产生的节点中，由此可以想到以时间顺序组织MPT的节点。
 
-```
-hash(node) => node
-```
-
-扩展为：
+为MPT的提交操作分配递增的序号，称作提交序号，记作 *S*。定义称为分区系数的常量*N*。令 *P = [S / N]*，*Q = S mod N*。构造节点存储的键为:
 
 ```
-prefix || hash(node) => node || trailing
+P || path || Q
 ```
 
-其中 *prefix* 长度为4个字节，由 *commitNum* 经big-endian编码得到。*trailing* 包含子节点的提交编号，为了紧凑，使用RLP编码。节点有两种类型：*shortNode* 和 *fullNode*。*shortNode* 只有一个子节点，因此把其唯一子节点的提交编号（`uint32`）RLP编码就成为它的 *trailing*。*fullNode* 有16个子节点，可以简单的将子节点的提交编号数组（`[16]uint32`）RLP编码作为 *trailing*。
+此格式带来以下特性：
 
-相应的，哈希指针需要被扩展。在代码中，哈希指针用`hashNode`描述：
+- 所有节点根据 *P* 值分区存储。由 *P* 与 *S* 的关系可以得出，在粒度 *N* 下，节点是按时间顺序排列的。在数据库层面，level间重叠的概率降低，最直接的好处是查询速度的提高，此外，较少的重叠带来较少level归并，从而提高了写入吞吐量、减小了写入放大。
 
-```go
-type hashNode []byte
+- 节点的热度跟新旧程度相关，高热度的节点因此比较集中，而不是分散在数据库各处，这在一定程度上能提高数据库和文件系统缓存的命中率，从而加快查询速度。
+
+- 在周期 *N* 内，相同路径的节点按*Q*值大小排列。也就是说，一个节点的不同版本会按照提交顺序被存储在一起。由此可以发现一个有趣的现象：在存储介质中，相邻节点的内容平均拥有很高的重复率，因此在启用了压缩选项的leveldb中，可以达到很高的压缩率。
+
+- 在 *N* 较大时，*path* 具有较高的索引权重，这大幅提高了MPT的节点遍历速度。
+
+为了维持父节点对子节点的指向和关联，需要在保持兼容的前提下扩展节点本身，扩展后的节点定义为：
+
+```
+node || trailing
 ```
 
-扩展为：
+*trailing* 是一个RLP编码的列表，包含非空哈希子节点的 *S* 值。
 
-```go
-type hashNode struct {
-    hash      []byte
-    commitNum uint32
-}
-```
-
-此外，接口也需要有所改动：
-
-构造函数
-```diff
--// 旧的定义
--func New(root thor.Bytes32, db Database) (*Trie, error)
-+// 新的定义
-+func New(root thor.Bytes32, commitNum uint32, db Database) (*Trie, error)
-```
-
-提交方法
-```diff
--// 旧的定义
--func (t *Trie) Commit() (thor.Bytes32, error)
-+// 新的定义
-+func (t *Trie) Commit(commitNum uint32) (thor.Bytes32, error)
-```
-
-# 结论
-
-新的MPT具有如下重要性质：
-
-1. **新节点的的提交编号总是大于老节点的提交编号**
-
-1. **父节点的提交编号总是大于等于子节点的提交编号**
