@@ -20,6 +20,7 @@ The VIP author is responsible for building consensus within the community and do
 | [201](./vips/VIP-201.md) | Simple Gas Payer Standard | Xiqing Chu <xiqing.chu@vechain.com> & Mog Lu <mog.lu@vechain.com> | Information | Draft |
 | [210](./vips/VIP-210.md) | Semi-Fungible Token(SFT) Standard | VeChain | Application | Draft |
 | [214](./vips/VIP-214.md) | Per Epoch VRF-Based Random Beacon Generation | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | core | Draft |
+| [220](./vips/VIP-220.md) | Finality with One Bit (FOB) | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | core | Draft |
 
 
 ## Contributing
