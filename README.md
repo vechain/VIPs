@@ -105,7 +105,7 @@ From Vechain CTO team:
 ## Community
 
 + Forum  - [Vechain Builders Website](https://vechain.discourse.group)
-+ [Discord](discord.gg/vechain) - Join the Vechain server,  open “Channels & Roles” and select “Development on vechain”.  “BUILDER COMMUNITY” will show on the side bar.
++ [Discord](https://discord.gg/vechain) - Join the Vechain server,  open “Channels & Roles” and select “Development on vechain”.  “BUILDER COMMUNITY” will show on the side bar.
 
 
 ## Conclusion
