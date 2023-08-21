@@ -67,7 +67,7 @@ For a VIP in `Draft` status:
 2. The author creates a PR to update the VIP in the [vechain/VIPs](https://github.com/vechain/vips) repository.
 3. The reviewers within the working group will then thoroughly review the technical aspects of the VIP to ensure it could be implemented with the vechain protocol.
 4. The author should request the reviewers in the working group to approve the PR if they are satisfied with the VIP's technical details.
-5. For the VIP to move to the `Accepted` state, it requires **1 approval** from the reviewers in the working group. All reviewers must agree and have no issues or objections to the proposed VIP. 
+5. For the VIP to move to the `Accepted` state, it requires at least **1 approval** from the reviewers in the working group. All reviewers must agree and have no issues or objections to the proposed VIP. 
 
 ### 3.VIP Implementation
 VIPs in `Accepted` state will be implemented in a future release of the vechain protocol. 
