@@ -14,7 +14,7 @@ We provide [the status page](./the-status-page.md) listing and tracking VIPs.
 
 Here we define the following VIP categories:
 
-+ **Core**: VIPs that focus on describing improvements on the VechainThor protocol (e.g., the consensus algorithm, transaction model, account model, runtime and etc.)  which may result in a consensus fork. Typically, they require broad agreement and coordination among the vechain community.
++ **Core**: VIPs that focus on describing improvements on the VechainThor protocol (e.g., the consensus algorithm, transaction model, account model, runtime, etc.)  which may result in a consensus fork. Typically, they require broad agreement and coordination among the vechain community.
 
 + **Interface**: VIPs that concentrate on improving client API specifications and standards. They aim to improve interoperability and consistency in client implementations.
 
