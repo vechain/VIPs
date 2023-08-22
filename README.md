@@ -97,10 +97,10 @@ From Core dev teams:
 + [Asbert Ma](http://github.com/asbertMa/)
  
 From Vechain CTO team:
-+ Neil Brett
-+ Vineet Singh
-+ Ben Moran
-+ Daithi Hearn
++ [Neil Brett](https://github.com/nwbrettski)
++ [Vineet Singh](https://github.com/vineet-codes)
++ [Ben Moran](https://github.com/BenMVeChain)
++ [Daithi Hearn](https://github.com/daithihearn)
 
 ## Community
 
