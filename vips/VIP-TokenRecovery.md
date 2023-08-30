@@ -2,7 +2,7 @@
 Title: Token Recovery
 Description: New and improved official documentation for support.vechain.org to guide VET holders with a safe and successful token recovery process.
 Author: VetMaik (vetmaik@outlook.com)
-Discussions: <URL> (will be added later)
+Discussions: https://vechain.discourse.group/t/vip-tokenrecovery-new-and-better-documentation-to-help-our-community-in-recovering-their-lost-funds/42
 Category:  Information
 Status: Draft
 CreatedAt: 2023-08-30
