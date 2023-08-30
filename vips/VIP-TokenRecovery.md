@@ -1,6 +1,6 @@
 ---
 Title: Token Recovery
-Description: New and improved official documentation for support.vechain.org to guide users with a safe and successful token recovery process.
+Description: New and improved official documentation for support.vechain.org to guide VET holders with a safe and successful token recovery process.
 Author: VetMaik (vetmaik@outlook.com)
 Discussions: <URL> (will be added later)
 Category:  Information
@@ -10,76 +10,23 @@ CreatedAt: 2023-08-30
 ---
 
 ## Overview
-
-<!--   
-  The Overview is a multi-sentence (short paragraph) technical summary of the issue being addressed. This should be a very terse and human-readable version of the specification section. Someone should be able to read only the abstract to get the gist of what this specification does.
-  TODO: Remove this comment before submitting 
--->
-
+Crypto mass-adoption is on the horizon and therefor our documentation is need of an upgrade to support the masses. Already today, I'm contacted by a lot of people who have been scammed or made mistakes while withdrawing their vechain tokens from a CEX or transferring them between wallets. The official Vechain documentation on the support website needs additional articles about how you can recover your funds when you've made a mistake. Another reason why we need good support resources is because it will reduce the amount of people falling for scams and traps when asking for support.
   
 ## Motivation
-
-<!--
-  This section is optional.
-  
-  The motivation section should include a description of any nontrivial problems the VIP solves. It should not describe how the VIP solves those problems, unless it is not immediately obvious. It should not describe why the VIP should be made into a standard, unless it is not immediately obvious.
-  
-  With a few exceptions, external links are not allowed. If you feel that a particular resource would demonstrate a compelling case for your VIP, then save it as a printer-friendly PDF, put it in the assets folder, and link to that copy.
-  
-  TODO: Remove this comment before submitting
--->
+As a community admin, I'm helping out VET holders on a daily basis. This varies from explaining about how the vechain wallets work to aiding help in recovering their funds. I'm known for a trusted helper in our community, but I will be always available to help. That's why I want official documentation on recover topics so everyone can be supported with token recovery through our official resources instead of the risk of falling for scams on X, Discord, Reddit, and Telegram.
 
 ## Rationale
-
-<!--
-  The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages.
-  
-  The current placeholder is acceptable for a draft.
-  
-  TODO: Remove this comment before submitting
--->
+We need to create easy-to-understand guides and/or tutorials on support.vechain.com to aid our holders in recovering their lost VET.
   
 ## Specification
-  
-<!--
-  The Specification section should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations.
-  
-  TODO: Remove this comment before submitting
--->
+The different guides would written as articles in the CMS system that support.vechain.org is using for their support.
 
 ## Test Cases
   
-<!--
-  This section is optional for non-Core VIPs.
-
-  The Test Cases section should include expected input/output pairs, but may include a succinct set of executable tests. It should not include project build files. No new requirements may be be introduced here (meaning an implementation following only the Specification section should pass all tests here.)
-  
-  If the test suite is too large to reasonably be included inline, then consider adding it as one or more files in `../assets/vip-####/`. External links will not be allowed
-
-  TODO: Remove this comment before submitting
--->
-  
 ## Reference Implementation
-  
-<!--
-  This section is optional.
-
-  The Reference Implementation section should include a minimal implementation that assists in understanding or implementing this specification. It should not include project build files. The reference implementation is not a replacement for the Specification section, and the proposal should still be understandable without it.
-  
-  If the reference implementation is too large to reasonably be included inline, then consider adding it as one or more files in `../assets/vip-####/`. External links will not be allowed.
-
-  TODO: Remove this comment before submitting
--->
+For reference, please have a quick look at https://myvechain.com where I created similar guides to help out our community members.
   
 ## Security Considerations
-
-<!--
-  All VIPs must contain a section that discusses the security implications/considerations relevant to the proposed change. Include information that might be important for security discussions, surfaces risks and can be used throughout the life cycle of the proposal. For example, include security-relevant design decisions, concerns, important discussions, implementation-specific guidance and pitfalls, an outline of threats and risks and how they are being addressed. VIP submissions missing the "Security Considerations" section will be rejected. An VIP cannot proceed to status "Final" without a Security Considerations discussion deemed sufficient by the reviewers.
-
-  The current placeholder is acceptable for a draft.
-
-  TODO: Remove this comment before submitting
--->
-
+This VIP is increasing the security for our holders by providing them with official documentation on topics that are used for scamming people.
 
 Copyright and related rights waived via [CC0](./LICENSE.md).
