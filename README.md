@@ -97,6 +97,7 @@ From Core dev teams:
 + [Asbert Ma](http://github.com/asbertMa/)
  
 From Vechain CTO team:
++ [Antonio Senatore](https://github.com/bacco1977)
 + [Neil Brett](https://github.com/nwbrettski)
 + [Vineet Singh](https://github.com/vineet-codes)
 + [Ben Moran](https://github.com/BenMVeChain)
