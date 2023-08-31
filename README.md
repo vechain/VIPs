@@ -5,7 +5,7 @@
 The Vechain Improvement Proposal (VIP) campaign is formally launched with initial funding of **$100k**. This campaign aims to to encourage community developers to propose ideas or solutions in the form of VIPs to benefit VechainThor. For each VIP, we’ll award **$2k** USD!
 
 ### :memo::question:How to get the reward
-A proposed VIP moves from the `Idea` stage to the `Draft` stage, i.e. it has successfully received support from at least 3 reviewers, completed all the required information and been merged into the VIP Github repo.
+A proposed VIP moves from the `Idea` stage to the `Draft` stage, i.e. it has successfully received support from at least 3 reviewers, completed all the required information and been merged into the VIP GitHub repo.
 
 ![gradient-large](https://github.com/vechain/VIPs/assets/5069216/c0f59d77-2896-4e07-a12d-23de97b9ffb2)
 
