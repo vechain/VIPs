@@ -4,7 +4,7 @@ Description: Ability to manage subscriptions for NFTs
 Author: Mario Micklisch (@ifavo)
 Discussions: https://vechain.discourse.group/t/add-vip-nft-subscriptions/49
 Category:  Application
-Status: Draft
+Status: Idea
 CreatedAt: 2023-09-01
 
 ---
