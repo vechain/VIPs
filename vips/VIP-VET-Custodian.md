@@ -1,9 +1,10 @@
 ---
-VIP: 231
 Title: VET Custodian Contract Standard
+Description: A standard for smart contracts to store VET and distribute VTHO back to users fairly and automatically.
 Author: Xiqing Chu <xiqing.chu@vechain.org>
-Category: Information
-Status: Draft
+Discussion: https://vechain.discourse.group/t/add-vip-vet-custodian-contract-standard/44
+Category: Application
+Status: Idea
 CreatedAt: 2023-07-08
 ---
 
@@ -292,4 +293,4 @@ Modern fintech infrastructure, such as UniSwap, heavily relies on WETH as a fund
 
 ### (II) VVET Example Project
 
-The audited and running dapp of `StakingModel` is included in `VVET` project created by core VeChain developers. It ensures a fair distribution of VTHO. The source code is at [[github]](https://github.com/VeChainDEXCode/vvet), and the deployed address on-chan is at [[0x45429a2255e7248e57fce99e7239aed3f84b7a53]](https://explore.vechain.org/accounts/0x45429a2255e7248e57fce99e7239aed3f84b7a53/transfer)
+The audited and running dapp of `StakingModel` is included in `VVET` project created by core VeChain developers. It ensures a fair distribution of VTHO. The source code is at [[github]](https://github.com/vechainlabs/vvet), and the deployed address on-chan is at [[0x45429a2255e7248e57fce99e7239aed3f84b7a53]](https://explore.vechain.org/accounts/0x45429a2255e7248e57fce99e7239aed3f84b7a53/transfer)
