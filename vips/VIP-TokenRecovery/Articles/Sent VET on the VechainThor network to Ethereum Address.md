@@ -8,7 +8,7 @@ Copy the address you've sent your VET to. Paste the address in the search box on
 
 If your tokens are on the VechainThor network, then both the tokens and the transaction should be visible right now.
 
-![Token Image](../Images/vechainstatstokens.png)
+![Token Image](../Images/tokens.png)
 
 ## Step 2: Download the official Sync2 wallet
 
