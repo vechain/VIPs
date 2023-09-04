@@ -20,6 +20,9 @@ We need to create easy-to-understand guides and/or tutorials on support.vechain.
   
 ## Specification
 The different guides would written as articles in the CMS system that support.vechain.org is using for their support.
+Additionally, I would like to request support for VET tokenswap for chains that have a bridged version of vechain, like BSC and Cronos.
+This way - users who withdrew their vechain on the wrong network, can easily swap them for the official variant.
+The official vechain token bridge can be found here: https://bridge.vechain.best/#swap
 
 ## Test Cases
   
