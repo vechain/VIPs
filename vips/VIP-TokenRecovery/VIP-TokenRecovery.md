@@ -24,6 +24,8 @@ Additionally, I would like to request support for VET tokenswap for chains that 
 This way - users who withdrew their vechain on the wrong network, can easily swap them for the official variant.
 The official vechain token bridge can be found here: https://bridge.vechain.best/#swap
 
+It would also be great if we could add custom derivation path support to VeWorld. Recently this has been added to Sync2. It would be even better to use VeWorld in the guides.
+
 ## Test Cases
   
 ## Reference Implementation
