@@ -11,7 +11,7 @@ CreatedAt: 2023-09-04
 
 ## Overview
 
-Contracts are widely used to in Multi-Sig-Wallets or for DAOs. VeChainThor Nodes can not be transferred to contracts due a restriction in the node-contract. 
+Contracts are widely used, for example in Multi-Sig-Wallets or for DAOs. VeChainThor Nodes can not be transferred to contracts due a restriction in the node-contract. 
 Lifting the transfer restriction to allow ownership for contracts will allow a widely shared use of VeChainThor Node, especially will it allow to form DAOs arround a single VeChainThor Node.
 
   
