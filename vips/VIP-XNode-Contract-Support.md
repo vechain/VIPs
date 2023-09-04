@@ -4,7 +4,7 @@ Description: Allow contracts to own VeChainThor Nodes to share ownership or bene
 Author: Mario Micklisch (@ifavo)
 Discussions: https://vechain.discourse.group/t/add-vip-support-contracts-for-vechainthor-node-ownership/50
 Category:  Core
-Status: Draft
+Status: Idea
 CreatedAt: 2023-09-04
 
 ---
