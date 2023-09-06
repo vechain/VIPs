@@ -2,7 +2,7 @@
 Title: DID Protocal
 Description: Implement DID (Decentralized Identifiers) on Vechain
 Author: Mog Lu <mog.lu@vechain.org>
-Discussions: 
+Discussions: https://vechain.discourse.group/t/add-vip-implement-did-decentralized-identifiers/62
 Category:  Application
 Status: Draft
 CreatedAt: 2023-09-05
