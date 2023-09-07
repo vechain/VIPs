@@ -2,7 +2,7 @@
 Title: VIP-180
 Description: Fungible Token Standard
 Author: Paula Amstutz paula@saynode.ch
-Discussions: <URL>
+Discussions: https://vechain.discourse.group/t/vip180-superset-of-erc20/67?u=paulaamstutz
 Category: Application
 Status: Idea
 CreatedAt: 2023-09-07
