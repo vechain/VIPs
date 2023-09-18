@@ -13,9 +13,9 @@ If your tokens are on the VechainThor network, then both the token and the trans
 ## Step 2: Download the official Sync2 wallet
 Sync2 is, at the moment of writing, the only vechain wallet that supports a custom derivation path.
 Download Sync2 on your preferred operating system.
-**Desktop**: https://sync.vecha.in/
-**Android**: https://play.google.com/store/apps/details?id=org.vechain.sync2&hl=en_US
-**Apple**: https://apps.apple.com/gb/app/vechain-sync2/id6446363029
+-**Desktop**: https://sync.vecha.in/
+-**Android**: https://play.google.com/store/apps/details?id=org.vechain.sync2&hl=en_US
+-**Apple**: https://apps.apple.com/gb/app/vechain-sync2/id6446363029
 
 > [!WARNING]
 > Always double check that you download the wallet app from a trusted source!
