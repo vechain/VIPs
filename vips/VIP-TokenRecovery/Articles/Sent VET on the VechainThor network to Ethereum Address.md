@@ -24,8 +24,8 @@ After downloading the Sync2 wallet, continue to Step 3.
 ## Step 3: Import your wallet with your seed phrase
 Open Sync2 on your mobile device or computer and choose the import wallet option.
 1. Enter the 12 words (seed phrase) that belong to your Ethereum address
-2. Click on [Advance]
-3. Select [x]Ethereum
+2. Click on Advance
+3. Select the Ethereum option
 4. Click on OK
 
 ![Token Recovery Image](../Images/sync2recovery.png)
