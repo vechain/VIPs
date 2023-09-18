@@ -28,7 +28,7 @@ Open Sync2 on your mobile device or computer and choose the import wallet option
 3. Select [x]Ethereum
 4. Click on OK
 
-![Token Recovery Image](../sync2recovery.png)
+![Token Recovery Image](../Images/sync2recovery.png)
 
 And that's it! You imported your Ethereum wallet address on the VechainThor network.
 You should see your tokens in your wallet.
