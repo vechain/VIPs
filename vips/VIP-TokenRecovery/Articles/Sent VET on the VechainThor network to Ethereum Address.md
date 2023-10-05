@@ -22,7 +22,7 @@ Download Sync2 on your preferred operating system.
 After downloading the Sync2 wallet, continue to Step 3.
 
 ## Step 3: Import your wallet with your seed phrase
-Open Sync2 on your mobile device or computer and choose the import wallet option.
+Open Sync2 on your mobile device or computer and choose the 'import' wallet option.
 1. Enter the 12 words (seed phrase) that belong to your Ethereum address
 2. Click on Advance
 3. Select the Ethereum option
