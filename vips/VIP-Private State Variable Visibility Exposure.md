@@ -2,7 +2,7 @@
 Title: Private State Variable Visibility Exposure
 Description: The Prototype builtin contract provides raw access to private or internal storage of all accounts/contracts.
 Author: Kyle L. (@picoAMPERE), Mario Micklisch (@ifavo)
-Discussions: 
+Discussions: https://vechain.discourse.group/t/add-vip-private-state-variable-visibility-exposure/84
 Category:  Information
 Status: Idea
 CreatedAt: 2023-12-06
