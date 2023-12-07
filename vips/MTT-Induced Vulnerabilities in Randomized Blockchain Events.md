@@ -2,9 +2,9 @@
 Title: Addressing MTT-Induced Vulnerabilities in Randomized Blockchain Events
 Description: This proposal identifies a vulnerability in vechain's MTT system allowing users to manipulate outcomes of randomized events.
 Author: data,  ([@databeforedishonor])
-Discussions: [URL]
+Discussions: https://vechain.discourse.group/t/mtt-induced-vulnerabilities-in-randomized-events/88
 Category: Information
-Status: Draft
+Status: Idea
 CreatedAt: 2023-12-06
 
 ---
