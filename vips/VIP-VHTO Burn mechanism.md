@@ -2,7 +2,7 @@
 Title: VTHO Burn mechanism
 Description: Introduce a mechanism to allow for the burning of VTHO tokens to reduce total supply and enhance tokenomics.
 Author: Sebastian Debaillie <vecorgi@gmail.com>
-Discussions: <URL>
+Discussions: https://vechain.discourse.group/t/add-vtho-burn-mechanism/90
 Category: Core
 Status: Idea
 CreatedAt: 2023-12-09
