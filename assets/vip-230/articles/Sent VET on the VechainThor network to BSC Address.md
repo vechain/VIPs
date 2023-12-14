@@ -4,11 +4,11 @@ Did you sent your VET tokens to your Binance Smart Chain (BSC) address? This gui
 Double-check that you've sent your VET tokens by using the VechainThor network. You can easily check that by using https://vechainstats.com.
 Copy the address you've sent your VET to. Paste the address in the search box on the VechainStats website and hit enter.
 
-![VechainStats Image](../Images/vechainstats.png)
+![VechainStats Image](../images/vechainstats.png)
 
 If your tokens are on the VechainThor network, then both the token and the transaction should be visible right now.
 
-![Token Image](../Images/tokens.png)
+![Token Image](../images/tokens.png)
 
 ## Step 2: Download the official Sync2 wallet
 Sync2 is, at the moment of writing, the only vechain wallet that supports a custom derivation path.
@@ -29,7 +29,7 @@ Open Sync2 on your mobile device or computer and choose the 'import' wallet opti
 4. Complete the Path with: 714'/0'/0
 5. Click on OK
 
-![Token Recovery Image](../Images/sync2recovery2.png)
+![Token Recovery Image](../images/sync2recovery2.png)
 
 And that's it! You imported your BSC wallet address on the VechainThor network.
 You should see your tokens in your wallet.
