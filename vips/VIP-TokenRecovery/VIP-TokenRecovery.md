@@ -1,4 +1,5 @@
 ---
+VIP: 230
 Title: Token Recovery
 Description: New and improved official documentation for support.vechain.org to guide VET holders with a safe and successful token recovery process.
 Author: VetMaik (vetmaik@outlook.com)
