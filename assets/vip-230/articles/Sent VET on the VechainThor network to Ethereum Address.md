@@ -1,4 +1,4 @@
-Did you sent your VET tokens to your Ethereum address? This guide will help you retrieve them.
+Did you send your VET tokens to your Ethereum address? This guide will help you retrieve them.
 
 ## Step 1: Verify that you sent your tokens with the VechainThor network
 Double-check that you've sent your VET tokens by using the VechainThor network. You can easily check that by using https://vechainstats.com.
