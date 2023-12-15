@@ -101,9 +101,6 @@ From Core dev teams:
 + [Peter Zhou](https://github.com/zzGHzz)
 + [Bin Qian](https://github.com/qianbin)
 + [Tony Li](https://github.com/libotony)
-+ [Tofu Chu](https://github.com/laalaguer)
-+ [Mog Lu](https://github.com/mongelly)
-+ [Asbert Ma](http://github.com/asbertMa/)
  
 From Vechain CTO team:
 + [Antonio Senatore](https://github.com/bacco1977)
