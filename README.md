@@ -108,6 +108,10 @@ From Vechain CTO team:
 + [Vineet Singh](https://github.com/vineet-codes)
 + [Ben Moran](https://github.com/BenMVeChain)
 + [Daithi Hearn](https://github.com/daithihearn)
++ [Darren Kelly](https://github.com/darrenvechain)
++ [Miguel Rojo](https://github.com/freemanzMrojo)
++ [Vanja Tomic](https://github.com/vanja-vechain)
++ [Clayton Neal](https://github.com/claytonneal)
 
 ## Community
 
