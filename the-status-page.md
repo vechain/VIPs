@@ -23,11 +23,12 @@ All Vechain Improvement Proposals
 | [210](./vips/VIP-210.md) | Semi-Fungible Token(SFT) Standard | VeChain | Application | Draft | - |
 | [214](./vips/VIP-214.md) | Per Epoch VRF-Based Random Beacon Generation | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | Core | Draft | - |
 | [220](./vips/VIP-220.md) | Finality with One Bit (FOB) | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | Core | Draft | - |
+| [230](./vips/VIP-230.md) | Token Recovery | VetMaik (vetmaik@outlook.com) | Information | Draft | [Antonio Senatore](https://github.com/bacco1977), [Neil Brett](https://github.com/nwbrettski) and [Daithi Hearn](https://github.com/daithihearn) |
 
 
 ## Stagnant 
 | No.                      | Title                          | Owner   | Category    | Status | Reviewers |
-| ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
+| ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |、
 |   |   |   |   |   |
 
 
