@@ -28,7 +28,7 @@ The rationale behind this proposal is to align VeChain's smart contract standard
 To promote alignment with widely accepted Ethereum standards and enhance interoperability, the following actions are recommended:
 
 1. **Supersede VIP180 in favor of ERC20:**
-   - Developers are strongly encouraged to migrate from VIP180 to the ERC20 standard for fungible token implementations on the VeChainThor Network.
+   - Developers are strongly encouraged to migrate from VIP180 to the ERC20 standard for fungible token implementations on the VechainThor Network.
    - New projects intending to create fungible tokens should prioritize the use of ERC20 rather than VIP180.
 
 2. **Withdraw VIP181 in favor of ERC721:**
