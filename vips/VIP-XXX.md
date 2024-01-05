@@ -1,7 +1,7 @@
 ---
 Title: ERC Contract Adoption
 Description: |
-  is VeChain Improvement Proposal (VIP) advocates for the adoption of Ethereum Request for Comment (ERC) standards, aiming to eliminate duplication and enhance interoperability by aligning VeChain contracts with their Ethereum counterparts.
+  This VeChain Improvement Proposal (VIP) advocates for the adoption of Ethereum Request for Comment (ERC) standards, aiming to eliminate duplication and enhance interoperability by aligning VeChain contracts with their Ethereum counterparts.
 Author: Darren Kelly, darren.kelly@vechain.rog
 # TODO
 Discussions: TDB
