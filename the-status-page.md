@@ -22,7 +22,7 @@ All Vechain Improvement Proposals
 | [214](./vips/VIP-214.md) | Per Epoch VRF-Based Random Beacon Generation | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | Core | Draft | - |
 | [220](./vips/VIP-220.md) | Finality with One Bit (FOB) | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | Core | Draft | - |
 | [230](./vips/VIP-230.md) | Token Recovery | VetMaik (vetmaik@outlook.com) | Information | Draft | [Antonio Senatore](https://github.com/bacco1977), [Neil Brett](https://github.com/nwbrettski) and [Daithi Hearn](https://github.com/daithihearn) |
-| [165](./vips/VIP-165.md) | ERC Contract Adoption | Darren Kelly (darren.kelly@vechain.org) | Application | Draft
+| [240](./vips/VIP-240.md) | ERC Contract Adoption | Darren Kelly (darren.kelly@vechain.org) | Application | Draft
 
 
 ## Stagnant 
