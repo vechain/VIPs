@@ -9,7 +9,6 @@ All Vechain Improvement Proposals
 ## Accepted
 | No.                      | Title                          | Owner   | Category    | Status | Reviewers |
 | ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
-
 | [230](./vips/VIP-230.md) | Token Recovery | VetMaik (vetmaik@outlook.com) | Information | Accepted | [Antonio Senatore](https://github.com/bacco1977), [Neil Brett](https://github.com/nwbrettski) and [Daithi Hearn](https://github.com/daithihearn) |
 
 ## Draft
