@@ -5,7 +5,7 @@ Description: A standard for smart contracts to store VET and distribute VTHO bac
 Author: Xiqing Chu <xiqing.chu@vechain.org>
 Discussion: https://vechain.discourse.group/t/add-vip-vet-custodian-contract-standard/44
 Category: Application
-Status: Idea
+Status: Draft
 CreatedAt: 2023-07-08
 ---
 
