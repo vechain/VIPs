@@ -1,4 +1,5 @@
 ---
+VIP: 240
 Title: VET Custodian Contract Standard
 Description: A standard for smart contracts to store VET and distribute VTHO back to users fairly and automatically.
 Author: Xiqing Chu <xiqing.chu@vechain.org>
