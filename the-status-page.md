@@ -21,7 +21,10 @@ All Vechain Improvement Proposals
 | [201](./vips/VIP-201.md) | Simple Gas Payer Standard | Xiqing Chu <xiqing.chu@vechain.com> & Mog Lu <mog.lu@vechain.com> | Information | Draft | - |
 | [214](./vips/VIP-214.md) | Per Epoch VRF-Based Random Beacon Generation | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | Core | Draft | - |
 | [220](./vips/VIP-220.md) | Finality with One Bit (FOB) | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | Core | Draft | - |
-| [240](./vips/VIP-240.md) | ERC Contract Adoption | Darren Kelly (darren.kelly@vechain.org) | Application | Draft
+| [240](./vips/VIP-240.md) | VET Custodian Contract Standard | Xiqing Chu (xiqing.chu@vechain.org) | Application | Draft | [Peter Zhou](https://github.com/zzGHzz), [Bin Qian](https://github.com/qianbin), [Darren Kelly](https://github.com/darrenvechain) |
+| [250](./vips/VIP-250.md) | ERC Contract Adoption | Darren Kelly (darren.kelly@vechain.org) | Application | Draft
+
+
 
 ## Stagnant 
 | No.                      | Title                          | Owner   | Category    | Status | Reviewers |
