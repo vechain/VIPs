@@ -7,6 +7,12 @@ Status: Accepted
 CreatedAt: 2018-09-01
 ---
 
+## ⚠️ 取代 ⚠️
+
+**此标准 (VIP-181) 已被以太坊上的 [ERC721](https://github.com/ethereum/ercs/blob/master/ERCS/erc-721.md) 标准取代。强烈建议不要继续开发和使用 VIP-181，建议现有实现迁移到 ERC721。**
+
+有关在 VechainThor 网络上使用 ERC721 非同质化代币的详细指南，请参阅[文档](https://github.com/ethereum/ercs/blob/master/ERCS/erc-721.md)。
+
 # 概述
 
 VIP181标准协议是基于[ERC721](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md)的修改，对非同质化代币进行规范并提供了转移数字货币的基本能力。
