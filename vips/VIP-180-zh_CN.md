@@ -2,7 +2,7 @@
 VIP: 180
 Title: Fungible Token Standard
 Category: Application
-Author: VeChain Foundation
+Author: Vechain Foundation
 Status: Final
 CreatedAt: 2018-09-01
 ---

@@ -50,7 +50,7 @@ CreatedAt: 2019-03-12
 
 ## 哈希算法
 
-默认哈希算法采用 VeChain 广泛使用的 `blake2b 256-bit` 哈希算法。
+默认哈希算法采用 Vechain 广泛使用的 `blake2b 256-bit` 哈希算法。
 
 ## 签名算法
 

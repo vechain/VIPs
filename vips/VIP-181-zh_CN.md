@@ -2,7 +2,7 @@
 VIP: 181
 Title: Non-fungible Token Standard
 Category: Application
-Author: VeChain Foundation
+Author: Vechain Foundation
 Status: Accepted
 CreatedAt: 2018-09-01
 ---
