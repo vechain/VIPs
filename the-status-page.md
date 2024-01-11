@@ -41,7 +41,7 @@ All Vechain Improvement Proposals
 | No.                      | Title                          | Owner   | Category    | Status | Reviewers |
 | ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
 | [180](./vips/VIP-180.md) | Fungible Token Standard        | Vechain | Application | Final  | - |
-| [181](./vips/VIP-181.md) | Non-Fungible Token Standard    | Vechain | Application | Accepted  | - |
+| [181](./vips/VIP-181.md) | Non-Fungible Token Standard    | Vechain | Application | Superseded  | - |
 | [210](./vips/VIP-210.md) | Semi-Fungible Token(SFT) Standard | Vechain | Application | Superseded | - |
 
 ## Rejected
