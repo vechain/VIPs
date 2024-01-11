@@ -11,7 +11,7 @@ CreatedAt: 2018-09-01
 
 **此标准 (VIP-180) 已被以太坊上的 [ERC20](https://github.com/ethereum/ERCs/blob/master/ERCS/erc-20.md) 标准取代。强烈建议不要开发和使用 VIP-180，建议现有实现迁移到 ERC20。**
 
-有关在 VechainThor 网络上使用 ERC20 作为可替代代币的详细指南，请参阅文档[此处](https://github.com/ethereum/ERCs/blob/master/ERCS/erc-20.md)。
+有关在 VechainThor 网络上使用 ERC20 作为同质化代币的详细指南，请参阅文档[此处](https://github.com/ethereum/ERCs/blob/master/ERCS/erc-20.md)。
 
 # 概述
 
