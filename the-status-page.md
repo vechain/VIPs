@@ -41,6 +41,6 @@ All Vechain Improvement Proposals
 | ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
 | [193](./vips/VIP-193.md) | Committee-Based POA | Ziheng Zhou (peter.zhou@vechain.com) and Zhijie Ren (zhijie.ren@vechain.com) | Core | Superseded | - |
 | [200](./vips/VIP-200.md) | Implementation of SURFACE BFT Protocol | Ziheng Zhou (peter.zhou@vechain.com) and Zhijie Ren (zhijie.ren@vechain.com) | Core | Superseded | - |
-| [180](./vips/VIP-180.md) | Fungible Token Standard        | VeChain | Application | Superseded  | - |
-| [181](./vips/VIP-181.md) | Non-Fungible Token Standard    | VeChain | Application | Superseded  | - |
-| [210](./vips/VIP-210.md) | Semi-Fungible Token(SFT) Standard | VeChain | Application | Superseded | - |
+| [180](./vips/VIP-180.md) | Fungible Token Standard        | Vechain | Application | Superseded  | - |
+| [181](./vips/VIP-181.md) | Non-Fungible Token Standard    | Vechain | Application | Superseded  | - |
+| [210](./vips/VIP-210.md) | Semi-Fungible Token(SFT) Standard | Vechain | Application | Superseded | - |
