@@ -23,8 +23,6 @@ All Vechain Improvement Proposals
 | No.                      | Title                          | Owner   | Category    | Status | Reviewers |
 | ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
 | [210](./vips/VIP-210.md) | Semi-Fungible Token(SFT) Standard | VeChain | Application | Draft | - |
-| [214](./vips/VIP-214.md) | Per Epoch VRF-Based Random Beacon Generation | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | Core | Draft | - |
-| [220](./vips/VIP-220.md) | Finality with One Bit (FOB) | Zhijie Ren (zhijie.ren@vechain.com) and Ziheng Zhou (peter.zhou@vechain.com) | Core | Draft | - |
 | [240](./vips/VIP-240.md) | VET Custodian Contract Standard | Xiqing Chu (xiqing.chu@vechain.org) | Application | Draft | [Peter Zhou](https://github.com/zzGHzz), [Bin Qian](https://github.com/qianbin), [Darren Kelly](https://github.com/darrenvechain) |
 
 
