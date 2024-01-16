@@ -4,7 +4,6 @@ All Vechain Improvement Proposals
 ## Final 
 | No.                      | Title                          | Owner   | Category    | Status | Reviewers |
 | ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
-| [180](./vips/VIP-180.md) | Fungible Token Standard        | VeChain | Application | Final  | - |
 | [190](./vips/VIP-190.md) | Personal Sign Standard         | Totient Labs | Interface | Final  | - |
 | [191](./vips/VIP-191.md) | Designated Gas Payer           | Totient Labs | Core | Final  | - |
 | [192](./vips/VIP-192.md) | Simple Self-signed Certificate | Qian Bin(bin.qian@vechain.com) | Interface | Final | - |
@@ -15,15 +14,14 @@ All Vechain Improvement Proposals
 ## Accepted
 | No.                      | Title                          | Owner   | Category    | Status | Reviewers |
 | ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
-| [181](./vips/VIP-181.md) | Non-Fungible Token Standard    | VeChain | Application | Accepted  | - |
 | [230](./vips/VIP-230.md) | Token Recovery | VetMaik (vetmaik@outlook.com) | Information | Accepted | [Antonio Senatore](https://github.com/bacco1977), [Neil Brett](https://github.com/nwbrettski) and [Daithi Hearn](https://github.com/daithihearn) |
 
 
 ## Draft
 | No.                      | Title                          | Owner   | Category    | Status | Reviewers |
 | ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
-| [210](./vips/VIP-210.md) | Semi-Fungible Token(SFT) Standard | VeChain | Application | Draft | - |
 | [240](./vips/VIP-240.md) | VET Custodian Contract Standard | Xiqing Chu (xiqing.chu@vechain.org) | Application | Draft | [Peter Zhou](https://github.com/zzGHzz), [Bin Qian](https://github.com/qianbin), [Darren Kelly](https://github.com/darrenvechain) |
+| [241](./vips/VIP-241.md) | ERC Contract Adoption | Darren Kelly (darren.kelly@vechain.org) | Application | Draft |   |
 
 
 
@@ -43,3 +41,6 @@ All Vechain Improvement Proposals
 | ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
 | [193](./vips/VIP-193.md) | Committee-Based POA | Ziheng Zhou (peter.zhou@vechain.com) and Zhijie Ren (zhijie.ren@vechain.com) | Core | Superseded | - |
 | [200](./vips/VIP-200.md) | Implementation of SURFACE BFT Protocol | Ziheng Zhou (peter.zhou@vechain.com) and Zhijie Ren (zhijie.ren@vechain.com) | Core | Superseded | - |
+| [180](./vips/VIP-180.md) | Fungible Token Standard        | VeChain | Application | Superseded  | - |
+| [181](./vips/VIP-181.md) | Non-Fungible Token Standard    | VeChain | Application | Superseded  | - |
+| [210](./vips/VIP-210.md) | Semi-Fungible Token(SFT) Standard | VeChain | Application | Superseded | - |
