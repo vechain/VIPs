@@ -3,7 +3,7 @@ VIP: 192
 Title: Simple Self-signed Certificate
 Category: Interface
 Author: Qian Bin <bin.qian@vechain.com>
-Status: Draft
+Status: Final
 CreatedAt: 2019-03-12
 ---
 
