@@ -45,7 +45,7 @@ Feature: Accessing Information about Current Clause in Smart Contracts
 
 ## Rationale
 
-The design and decision to expose the clause context in the `extension` contract follows the same pattern as [VIP-191](https://github.com/vechain/VIPs/blob/master/vips/VIP-191.md). This time, the `extension` contract will migrate from V2 to V3 to provide the clause context information.
+The `extension` contract should migrate from V2 to V3 to provide the clause context information.
   
 ## Specification
 
