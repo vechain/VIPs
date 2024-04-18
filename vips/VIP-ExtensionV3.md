@@ -1,6 +1,6 @@
 ---
 Title: EVM Clause Context
-Description: This VIP proposes an enhancement of the built-in extension contract to provide a context of the current clause being executed.
+Description: This VIP proposes an enhancement of the built-in extension contract to provide information about the clauses in the current transaction.
 Author: @databeforedishonor and Darren Kelly (darren.kelly@vechain.org)
 Discussions: https://vechain.discourse.group/t/mtt-induced-vulnerabilities-in-randomized-events/88
 Category:  Core
