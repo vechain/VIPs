@@ -1,6 +1,6 @@
 ---
 Title: EVM Clause Context
-Description: This VIP proposes a an enhancement of the built-in extension contract to provide a context of the current clause being executed.
+Description: This VIP proposes an enhancement of the built-in extension contract to provide a context of the current clause being executed.
 Author: @databeforedishonor and Darren Kelly (darren.kelly@vechain.org)
 Discussions: https://vechain.discourse.group/t/mtt-induced-vulnerabilities-in-randomized-events/88
 Category:  Core
@@ -19,7 +19,7 @@ Smart contract developers may want to access information about the current claus
 
 ## Rationale
 
-The design and decision to expose the clause context in the `extension` contract follows the same pattern as [VIP-191](https://github.com/vechain/VIPs/blob/master/vips/VIP-191.md). This time the `extension` contract will migrate from V2 to V3 to provide the clause context information.
+The design and decision to expose the clause context in the `extension` contract follows the same pattern as [VIP-191](https://github.com/vechain/VIPs/blob/master/vips/VIP-191.md). This time, the `extension` contract will migrate from V2 to V3 to provide the clause context information.
   
 ## Specification
 
@@ -33,14 +33,14 @@ contract ExtensionV3 is ExtensionV2 {
     * @dev Get the index of the current clause in the transaction.
     */
     function txClauseIndex() public view returns (uint) {
-        return ExtensionV3Native(this).native_clauseIndex();
+        return ExtensionV3Native(this).native_txClauseIndex();
     }
 
     /**
     * @dev Get the total number of clauses in the transaction.
     */
     function txClauseCount() public view returns (uint) {
-        return ExtensionV3Native(this).native_clauseCount();
+        return ExtensionV3Native(this).native_txClauseCount();
     }
 }
 
@@ -134,12 +134,4 @@ curl --request POST \
 ]
 ```
   
-## Reference Implementation
-  
-N/A
-  
-## Security Considerations
-
-N/A
-
 Copyright and related rights waived via [CC0](./LICENSE.md).
