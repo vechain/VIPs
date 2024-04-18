@@ -15,7 +15,7 @@ The below VIP-XXX proposal outlines an upgrade to the EVM, which will expose cla
   
 ## Motivation
 
-Smart contracts developers may want to access information about the current clause being executed. For example, a smart contract can limit the number of clauses in case any malicious actor could exploit the contract via multiple clauses.
+Smart contract developers may want to access information about the current clause being executed. For example, a smart contract can limit the number of clauses in case any malicious actor could exploit the contract via multiple clauses.
 
 ## Rationale
 
