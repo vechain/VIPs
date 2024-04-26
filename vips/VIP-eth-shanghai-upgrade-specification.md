@@ -1,4 +1,5 @@
 ---
+VIP: 242
 Title: ETH Shanghai Upgrade Specification
 Description: This VIP defines the specification of the EVM changes to align with Ethereum Shanghai upgrade.
 Author: Tony Li (@libotony)
