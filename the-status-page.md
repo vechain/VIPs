@@ -22,6 +22,7 @@ All Vechain Improvement Proposals
 | ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
 | [240](./vips/VIP-240.md) | VET Custodian Contract Standard | Xiqing Chu (xiqing.chu@vechain.org) | Application | Draft | [Peter Zhou](https://github.com/zzGHzz), [Bin Qian](https://github.com/qianbin), [Darren Kelly](https://github.com/darrenvechain) |
 | [241](./vips/VIP-241.md) | ERC Contract Adoption | Darren Kelly (darren.kelly@vechain.org) | Application | Draft | [Neil Brett](https://github.com/nwbrettski), [Daithi Hearn](https://github.com/daithihearn), [Tony Li](https://github.com/libotony) |
+| [242](./vips/VIP-242.md) | ETH Shanghai Upgrade Specification | Tony Li ([@libotony](https://github.com/libotony)) | Core | Draft | [Neil Brett](https://github.com/nwbrettski), [Daithi Hearn](https://github.com/daithihearn), [Darren Kelly](https://github.com/darrenvechain) |
 
 
 
