@@ -2,7 +2,7 @@
 Title: Increase the base fee coefficient
 Description: This VIP proposes to increase the base fee coefficient range from 0-255 (2^8) to a larger range of 0-65535 (2^16)
 Author: Darren Kelly (darren.kelly@vechain.org)
-Discussions: TODO
+Discussions: https://vechain.discourse.group/t/increase-the-base-fee-coefficient/109
 Category:  Core
 Status: Draft
 CreatedAt: 2024-04-26
