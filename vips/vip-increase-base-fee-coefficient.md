@@ -1,5 +1,5 @@
 ---
-Title: Increase the base fee coefficient
+Title: Uncapped base fee coefficient
 Description: This VIP proposes a change to the base fee coefficient to make it uncapped.
 Author: Darren Kelly (darren.kelly@vechain.org)
 Discussions: https://vechain.discourse.group/t/increase-the-base-fee-coefficient/109
