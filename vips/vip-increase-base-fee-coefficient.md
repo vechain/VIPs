@@ -19,7 +19,7 @@ Client's of the blockchain can ensure that their transactions receive priority b
 
 ## Specification
   
-The implementation will change the `GasPriceCoef` of the transaction types from `uint8` to `uint16` in transaction models.
+The implementation will change the `GasPriceCoef` of the transaction models from `uint8` to `uint16`.
 
 ## Test Cases
   
