@@ -15,33 +15,7 @@ The below VIP-XXX proposal outlines an upgrade to the EVM, which will expose cla
   
 ## Motivation
 
-Smart contract developers may want to access information about the current clause being executed. For example, a smart contract can limit the number of clauses in case any malicious actor could exploit the contract via multiple clauses. The example given for the motivation of this VIP is:
-
-```gherkin
-Feature: Accessing Information about Current Clause in Smart Contracts
-
-  Scenario: Limiting the number of clauses in a smart contract
-    Given a Coin flip contract where heads reward 10 ERC20 tokens and tails result in loss
-    When I attempt to flip the coin with an empty wallet
-    Then on Attempt 1:
-      And Clause 1: flip the coin, resulting in Tails
-      And Clause 2: attempt to transfer 10 tokens to wallet B
-      And the transaction reverts due to insufficient balance (balanceOf(token) = 0)
-    And on Attempt 2:
-      And Clause 1: flip the coin, resulting in Heads
-      And Clause 2: transfer 10 tokens to wallet B
-      And the transaction succeeds (balanceOf(token) = 10)
-
-  Scenario: Implementing a possible solution
-    Given the need for developers to access information about the current clause being executed
-    When two built-in view functions are added for developers:
-      | Function        | Description                                              |
-      | txClauseCount() | Returns the count of clauses at the beginning of the tx |
-      | txClauseIndex() | Returns the index of the current clause being executed  |
-    Then developers can use these functions to implement modifiers preventing clauses from coming after certain events, such as:
-      | Modifier                                                        | Description                                                                                |
-      | onlyLastClause(ext.txClauseCount() == ext.txClauseIndex())      | Ensures that the clause is the last one executed in the transaction    
-```
+Smart contract developers may want to access information about the current clause being executed.
 
 ## Rationale
 
