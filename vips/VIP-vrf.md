@@ -1,11 +1,12 @@
-**Title**: Verifiable Random Function (VRF) for VeChainThor Ecosystem  
-**Description**: This proposal introduces Verifiable Random Function (VRF) to the VeChainThor ecosystem for secure and transparent random number generation.  
-**Author**: Erik Nucibella <erik.nucibella@vechain.org>, [@akanoce](https://github.com/akanoce)  
-**Discussions**: [https://vechain.discourse.group/t/add-vip-vrf-integration-on-vechainthor/238]  
-**Category**: Core  
-**Status**: Idea  
-**CreatedAt**: 2024-11-29
-
+---
+Title: Verifiable Random Function (VRF) for VeChainThor Ecosystem
+Description: This proposal introduces Verifiable Random Function (VRF) to the VeChainThor ecosystem for secure and transparent random number generation.
+Author: Erik Nucibella <erik.nucibella@vechain.org>, [@akanoce](https://github.com/akanoce)
+Discussions:
+  [https://vechain.discourse.group/t/add-vip-vrf-integration-on-vechainthor/238]
+Category: Core
+Status: Idea
+CreatedAt: 2024-11-29
 ---
 
 ## Overview
