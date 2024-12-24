@@ -48,7 +48,10 @@ The multi-sig wallet will include the following features:
 
 ### Example Smart Contract:
 
+Showcase of ethereum Smart Contract behaviour. 
+
 ```solidity
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 contract MultiSigWallet {
