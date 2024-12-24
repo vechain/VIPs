@@ -3,7 +3,7 @@ Title: Multi-Signature Wallet Standard for vechain
 Description: This proposal introduces a multi-signature wallet standard for secure and collaborative fund management.
 Author: Sebastian Seijo <sebastian.seijo@vechain.org>, [@sebaseek](https://github.com/sebaseek)
 Discussions:
-  []
+  [https://vechain.discourse.group/t/add-vip-multi-signature-wallet-standard/253]
 Category: Application
 Status: Draft
 CreatedAt: 2024-12-24
