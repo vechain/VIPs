@@ -105,6 +105,7 @@ The current VIP reviewers consist of the following members:
 + [Darren Kelly](https://github.com/darrenvechain)
 + [Miguel Rojo](https://github.com/freemanzMrojo)
 + [Neil Brett](https://github.com/nwbrettski)
++ [Paolo Galli](https://github.com/paologalligit)
 + [Pedro Gomes](https://github.com/otherview)
 + [Tony Li](https://github.com/libotony)
 + [Vanja Tomic](https://github.com/vanja-vechain)
