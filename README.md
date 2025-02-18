@@ -97,30 +97,24 @@ The VIP will need at least **1 approval** on GitHub from the reviewers within th
 ## VIP Reviewers
 The current VIP reviewers consist of the following members:
 
-From Core dev teams:
-+ [Peter Zhou](https://github.com/zzGHzz)
-+ [Bin Qian](https://github.com/qianbin)
-+ [Tony Li](https://github.com/libotony)
- 
-From Vechain CTO team:
 + [Antonio Senatore](https://github.com/bacco1977)
-+ [Neil Brett](https://github.com/nwbrettski)
-+ [Vineet Singh](https://github.com/vineet-codes)
 + [Ben Moran](https://github.com/BenMVeChain)
++ [Bin Qian](https://github.com/qianbin)
++ [Clayton Neal](https://github.com/claytonneal)
 + [Daithi Hearn](https://github.com/daithihearn)
 + [Darren Kelly](https://github.com/darrenvechain)
 + [Miguel Rojo](https://github.com/freemanzMrojo)
++ [Neil Brett](https://github.com/nwbrettski)
++ [Pedro Gomes](https://github.com/otherview)
++ [Tony Li](https://github.com/libotony)
 + [Vanja Tomic](https://github.com/vanja-vechain)
-+ [Clayton Neal](https://github.com/claytonneal)
++ [Vineet Singh](https://github.com/vineet-codes)
 
 ## Community
 
 + Forum  - [Vechain Builders Website](https://vechain.discourse.group)
 + [Discord](https://discord.gg/vechain) - Join the Vechain server,  open “Channels & Roles” and select “Development on vechain”.  “BUILDER COMMUNITY” will show on the side bar.
 
-
 ## Conclusion
 
 VIPs (Vechain Improvement Proposals) serve as a platform for the community to propose and discuss enhancements to the vechain ecosystem. By adhering to the VIP guidelines, individuals have the opportunity to contribute to the development of the Vechain blockchain.
-
- 
