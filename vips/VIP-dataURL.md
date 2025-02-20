@@ -2,7 +2,7 @@
 Title: Data URL Token Metadata
 Description: A standard for storing token metadata directly on-chain using data URLs
 Author: Kyle Boe <kyle@boe.codes>
-Discussions:
+Discussions: https://vechain.discourse.group/t/add-vip-data-url-token-metadata/313
 Category: Application
 Status: Draft
 CreatedAt: 2024-02-19
