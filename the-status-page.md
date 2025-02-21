@@ -19,10 +19,13 @@ All Vechain Improvement Proposals
 
 ## Draft
 | No.                      | Title                          | Owner   | Category    | Status | Reviewers |
-| ------------------------ | ------------------------------ | ------- | ----------- | ------ | ---- |
-| [240](./vips/VIP-240.md) | VET Custodian Contract Standard | Xiqing Chu (xiqing.chu@vechain.org) | Application | Draft | [Peter Zhou](https://github.com/zzGHzz), [Bin Qian](https://github.com/qianbin), [Darren Kelly](https://github.com/darrenvechain) |
-| [241](./vips/VIP-241.md) | ERC Contract Adoption | Darren Kelly (darren.kelly@vechain.org) | Application | Draft | [Neil Brett](https://github.com/nwbrettski), [Daithi Hearn](https://github.com/daithihearn), [Tony Li](https://github.com/libotony) |
+| ------------------------ | ------------------------------ | ------- | ----------- | ------ | --------- |
+| [240](./vips/VIP-240.md) | VET Custodian Contract Standard | Xiqing Chu (xiqing.chu@vechain.org) | Application | Draft | [Peter Zhou](https://github.com/zzGHzz),  [Bin Qian](https://github.com/qianbin),  [Darren Kelly](https://github.com/darrenvechain) |
+| [241](./vips/VIP-241.md) | ERC Contract Adoption | Darren Kelly (darren.kelly@vechain.org) | Application | Draft | [Neil Brett](https://github.com/nwbrettski), [Daithi Hearn](https://github.com/daithihearn),  [Tony Li](https://github.com/libotony) |
 | [242](./vips/VIP-242.md) | ETH Shanghai Upgrade Specification | Tony Li ([@libotony](https://github.com/libotony)) | Core | Draft | [Neil Brett](https://github.com/nwbrettski), [Daithi Hearn](https://github.com/daithihearn), [Darren Kelly](https://github.com/darrenvechain) |
+| [250](./vips/VIP-250.md) | Extend EVM's context to expose clause information | [databeforedishonor](https://github.com/databeforedishonor), <br/>Darren Kelly([@darrenvechain](https://github.com/darrenvechain)) | Core | Draft | Miguel Rojo([@freemanzMrojo](https://github.com/freemanzMrojo)), Paolo Galli([@paologalligit](https://github.com/paologalligit)), <br/>Tony Li([@libotony](https://github.com/libotony)) |
+| [251](./vips/VIP-251.md) | Dynamic Fee Market |  Neil Brett ([@nwbrettski](https://github.com/nwbrettski)), <br/>Paolo Galli ([@paologalligit](https://github.com/paologalligit)),<br/>Pedro Gomes ([@otherview](https://github.com/otherview)),<br/>Tony Li ([@libotony](https://github.com/libotony)) | Core | Draft | Daithi Hearn([@daithihearn](https://github.com/daithihearn)),<br/>Darren Kelly([@darrenvechain](https://github.com/darrenvechain)),<br/>Vanja Tomic([@vanja-vechain](https://github.com/vanja-vechain)) |
+| [252](./vips/VIP-252.md) | Typed Transaction Support | Neil Brett ([@nwbrettski](https://github.com/nwbrettski)),<br/>Paolo Galli ([@paologalligit](https://github.com/paologalligit)),<br/>Pedro Gomes ([@otherview](https://github.com/otherview)),<br/>Tony Li ([@libotony](https://github.com/libotony)),<br/>Vanja Tomic([@vanja-vechain](https://github.com/vanja-vechain)) | Core | Draft | Antonio Senatore([@bacco1977](https://github.com/bacco1977)),<br/>Miguel Rojo([@freemanzMrojo](https://github.com/freemanzMrojo)),<br/>Daithi Hearn([@daithihearn](https://github.com/daithihearn)),<br/>Darren Kelly([@darrenvechain](https://github.com/darrenvechain)) |
 
 
 
