@@ -5,7 +5,7 @@ Description: A standard way of representing VeChain transactions as URIs for QR 
 Author: Kyle Boe <kyle@boe.codes>
 Discussions: https://vechain.discourse.group/t/add-vip-transaction-uri-standard/445
 Category: Information
-Status: Draft
+Status: Idea
 CreatedAt: 2025-05-14
 ---
 
