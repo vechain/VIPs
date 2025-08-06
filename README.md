@@ -104,12 +104,15 @@ The current VIP reviewers consist of the following members:
 + [Daithi Hearn](https://github.com/daithihearn)
 + [Darren Kelly](https://github.com/darrenvechain)
 + [Miguel Rojo](https://github.com/freemanzMrojo)
++ [Mog Lu](https://github.com/moglu2017)
 + [Neil Brett](https://github.com/nwbrettski)
 + [Paolo Galli](https://github.com/paologalligit)
 + [Pedro Gomes](https://github.com/otherview)
 + [Tony Li](https://github.com/libotony)
 + [Vanja Tomic](https://github.com/vanja-vechain)
++ [Victor Bibiano](https://github.com/victhorbi)
 + [Vineet Singh](https://github.com/vineet-codes)
++ [Zhijie Ren](https://github.com/Zhijieren)
 
 ## Community
 
